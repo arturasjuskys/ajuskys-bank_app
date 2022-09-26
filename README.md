@@ -5,7 +5,7 @@
 <!-- * `Purchased Course`: 24.09.2020 -->
 <!-- * `Finished this Project`: 07.04.2021 12:50 -->
 
-## Logging-in samples
+## Login samples
 
 - Account 1:
   - username: js
@@ -13,3 +13,8 @@
 - Account 2:
   - username: jd
   - password: 2222
+
+![](./img/736%20-%20Bank%20App.jpg)
+![](./img/737%20-%20Bank%20App.jpg)
+![](./img/738%20-%20Bank%20App.jpg)
+![](./img/739%20-%20Bank%20App.jpg)
