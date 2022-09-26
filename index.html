@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="icon.png" type="image/png" />
+    <title>Bank App</title>
+  </head>
+  <body>
+    <nav>
+      <p>Login to get started</p>
+      <img src="assets/logo.png" alt="logo" />
+      <form>
+        <input type="text" placeholder="Username" />
+        <input type="text" placeholder="Pin" maxlength="4" />
+        <button>&rarr;</button>
+      </form>
+    </nav>
+
+    <main>
+      <article class="top">
+        <div class="left">
+          <p class="label">Current balance</p>
+          <p class="date">As of <span>05/03/2022</span></p>
+        </div>
+        <p class="balance">£0.00</p>
+      </article>
+
+      <article class="middle">
+        <div class="movements">
+          <div class="row">
+            <div class="type deposit">2 deposit</div>
+            <div class="date">3 days ago</div>
+            <div class="value">£4 000</div>
+          </div>
+          <div class="row">
+            <div class="type withdrawal">1 withdrawal</div>
+            <div class="date">24/01/2022</div>
+            <div class="value">£500</div>
+          </div>
+        </div>
+
+        <div class="right">
+          <div class="operation transfer">
+            <h2>Transfer money</h2>
+            <form>
+              <label for="to">Transfer to</label>
+              <input name="to" type="text" />
+              <label for="amount">Amount</label>
+              <input name="amount" type="number" />
+              <button>Submit</button>
+            </form>
+          </div>
+
+          <div class="operation loan">
+            <h2>Request loan</h2>
+            <form>
+              <label for="amount">Amount</label>
+              <input name="amount" type="number" />
+              <button>Submit</button>
+            </form>
+          </div>
+
+          <div class="operation close">
+            <h2>Close account</h2>
+            <form>
+              <label for="user">Confirm user</label>
+              <input name="user" type="text" />
+              <label for="pin">Confirm pin</label>
+              <input type="text" maxlength="4" />
+              <button>Submit</button>
+            </form>
+          </div>
+        </div>
+      </article>
+
+      <article class="bottom">
+        <div class="summary">
+          <p class="label">In</p>
+          <p class="value in">£0.00</p>
+          <p class="label">Out</p>
+          <p class="value out">£0.00</p>
+          <p class="label">Interest</p>
+          <p class="value interest">£0.00</p>
+          <button>&downarrow; SORT</button>
+        </div>
+
+        <div class="logout">
+          <p>You will be logged out in <span>05:00</span></p>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>

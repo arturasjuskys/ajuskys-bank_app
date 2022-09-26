@@ -1,0 +1,314 @@
+:root {
+  --color01: #f3f3f3;
+  --color02: #fff;
+  --color03: #ccc;
+  --green: #9be15d;
+  --red: #ff585f;
+  --yellow: #ffcb03;
+  --small: 5px;
+}
+
+/***********************************************************/
+/* default styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  color: #444;
+  background-color: var(--color01);
+  padding: 2rem;
+  height: 100vh;
+}
+main {
+  min-height: 90vh;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/***********************************************************/
+/* nav */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+nav p {
+  font-size: 1.9rem;
+  font-weight: 500;
+}
+nav img {
+  height: 5.25rem;
+}
+nav form {
+  display: flex;
+}
+nav form input {
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  font-size: 1.6rem;
+  font-family: inherit;
+  width: 15rem;
+  border-radius: 1rem;
+  margin-right: 1rem;
+  color: inherit;
+  border: 1px solid var(--color02);
+  transition: all 0.3s;
+}
+nav form input:focus {
+  outline: none;
+  border: 1px solid var(--color03);
+}
+nav form input::placeholder {
+  color: #bbb;
+}
+nav form button {
+  display: flex;
+  border: none;
+  background: none;
+  font-size: 2.5rem;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+nav form button:hover,
+nav form button:focus {
+  outline: none;
+  color: #777;
+}
+
+/***********************************************************/
+/* top */
+.top {
+  margin-top: 6rem;
+  display: flex;
+  justify-content: space-between;
+}
+.top .label {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.top .date {
+  font-size: 1.4rem;
+  color: #888;
+}
+.top .balance {
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+/***********************************************************/
+/* middle */
+.middle {
+  display: flex;
+}
+.middle .movements {
+  width: 100%;
+  background-color: var(--color02);
+  border-radius: 1rem;
+}
+.middle .movements .row {
+  padding: 2.25rem 4rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--color01);
+}
+.movements .type {
+  color: var(--color02);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 0.3rem 1rem;
+  margin-right: 2rem;
+  border-radius: var(--small);
+  width: 15rem;
+}
+.movements .deposit {
+  background-color: var(--green);
+}
+.movements .withdrawal {
+  background-color: var(--red);
+}
+.movements .date {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #666;
+}
+.movements .value {
+  font-size: 1.7rem;
+  margin-left: auto;
+}
+
+/* right */
+.operation {
+  width: 34rem;
+  border-radius: var(--small);
+  padding: 3rem 4rem;
+  color: #333;
+  margin: 0 0 1rem 1rem;
+}
+.operation.transfer {
+  background-color: var(--yellow);
+}
+.operation.loan {
+  background-color: var(--green);
+}
+.operation.close {
+  background-color: var(--red);
+}
+.operation h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+.operation form {
+  display: flex;
+  flex-direction: column;
+}
+.operation input {
+  border: none;
+  border-radius: var(--small);
+  font-size: 1.5rem;
+  width: 100%;
+  color: #333;
+  padding: 0.8rem 1rem;
+  transition: all 0.3s;
+}
+.operation input:focus {
+  outline: none;
+}
+.operation label {
+  margin-top: 0.8rem;
+}
+.operation button {
+  margin-top: 0.5rem;
+  padding: 0.8rem;
+  border: none;
+  border-radius: var(--small);
+  font-size: 1.4rem;
+  background-color: var(--color01);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.operation button:focus {
+  outline: none;
+}
+
+/***********************************************************/
+/* bottom */
+.bottom {
+  margin-top: 1rem;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.bottom .summary {
+  display: flex;
+  align-items: flex-end;
+}
+.bottom .label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-right: 0.8rem;
+  margin-bottom: 0.4rem;
+}
+.bottom .value {
+  font-size: 2.2rem;
+  margin-right: 2.5rem;
+}
+.bottom .in,
+.bottom .interest {
+  color: var(--green);
+}
+.bottom .out {
+  color: var(--red);
+}
+.bottom button {
+  margin-left: 0;
+  margin-bottom: 0.8rem;
+  border: none;
+  background: none;
+  font-size: 1.3rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    flex-direction: column-reverse;
+  }
+  nav img {
+    margin: 5rem;
+  }
+  nav form {
+    flex-direction: column;
+  }
+  nav form input {
+    margin: 0.3rem;
+    width: 100%;
+  }
+  nav form button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /**************************************************/
+  /* top */
+  .top {
+    align-items: center;
+  }
+  .top .label {
+    font-size: 1.4rem;
+  }
+  .top .date {
+    font-size: 1rem;
+  }
+  .top .balance {
+    font-size: 3rem;
+  }
+
+  /**************************************************/
+  /* middle */
+  .middle {
+    flex-direction: column;
+  }
+  .middle .movements .row {
+    padding: 1rem;
+  }
+  .middle .movements .type {
+    width: 11rem;
+  }
+
+  /**************************************************/
+  /* right */
+  .operation {
+    width: 100%;
+    margin: 1rem 0rem;
+    padding: 2rem;
+  }
+
+  /**************************************************/
+  /* bottom */
+  .bottom {
+    flex-direction: column;
+  }
+  .bottom .value {
+    font-size: 1.4rem;
+    margin-right: 0.8rem;
+  }
+  .bottom .label {
+    margin-bottom: 0.1rem;
+  }
+}
