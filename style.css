@@ -33,6 +33,10 @@ main {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+
+  /* fade-in-out animation */
+  opacity: 0;
+  transition: all 1s;
 }
 
 /***********************************************************/
@@ -105,14 +109,27 @@ nav form button:focus {
   font-size: 4rem;
   font-weight: 400;
 }
+.login-test {
+  margin-left: 2rem;
+}
+.login-test li {
+  list-style: none;
+  font-size: 1.4rem;
+}
 
 /***********************************************************/
 /* middle */
-.middle {
-  display: flex;
+
+.middle .left {
+  /* background-color: red; */
+  min-height: 100px;
+  height: 100%;
+  width: 100%;
 }
 .middle .movements {
   width: 100%;
+  min-height: 100px;
+  height: 100%;
   background-color: var(--color02);
   border-radius: 1rem;
 }
@@ -148,12 +165,56 @@ nav form button:focus {
   font-size: 1.7rem;
   margin-left: auto;
 }
+.middle {
+  margin-top: 1rem;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.middle .summary {
+  display: flex;
+  align-items: flex-end;
+}
+.middle .wrapper {
+  display: flex;
+  align-items: flex-end;
+  padding-left: 1rem;
+  margin-right: 4rem;
+}
+.middle .label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-right: 0.8rem;
+  margin-bottom: 0.4rem;
+}
+.middle .value {
+  font-size: 2.2rem;
+  /* margin-right: 2rem; */
+}
+.middle .in,
+.middle .interest {
+  color: var(--green);
+}
+.middle .out {
+  color: var(--red);
+}
+.middle button {
+  margin-left: 0;
+  margin-bottom: 0.8rem;
+  border: none;
+  background: none;
+  font-size: 1.3rem;
+  font-weight: 500;
+  cursor: pointer;
+}
 
 /* right */
 .operation {
   width: 34rem;
   border-radius: var(--small);
-  padding: 3rem 4rem;
+  padding: 2rem 3rem;
   color: #333;
   margin: 0 0 1rem 1rem;
 }
@@ -167,8 +228,8 @@ nav form button:focus {
   background-color: var(--red);
 }
 .operation h2 {
-  margin-bottom: 1.5rem;
-  font-size: 1.7rem;
+  /* margin-bottom: 1.5rem; */
+  font-size: 2rem;
   font-weight: 600;
 }
 .operation form {
@@ -206,44 +267,6 @@ nav form button:focus {
 
 /***********************************************************/
 /* bottom */
-.bottom {
-  margin-top: 1rem;
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
-}
-.bottom .summary {
-  display: flex;
-  align-items: flex-end;
-}
-.bottom .label {
-  font-size: 1.2rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  margin-right: 0.8rem;
-  margin-bottom: 0.4rem;
-}
-.bottom .value {
-  font-size: 2.2rem;
-  margin-right: 2.5rem;
-}
-.bottom .in,
-.bottom .interest {
-  color: var(--green);
-}
-.bottom .out {
-  color: var(--red);
-}
-.bottom button {
-  margin-left: 0;
-  margin-bottom: 0.8rem;
-  border: none;
-  background: none;
-  font-size: 1.3rem;
-  font-weight: 500;
-  cursor: pointer;
-}
 
 @media only screen and (max-width: 768px) {
   nav {
@@ -290,25 +313,30 @@ nav form button:focus {
   .middle .movements .type {
     width: 11rem;
   }
+  .middle .summary .wrapper {
+    margin-right: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .middle .value {
+    font-size: 1.4rem;
+    margin-right: 0.8rem;
+  }
+  .middle .label {
+    margin-bottom: 0.1rem;
+  }
 
   /**************************************************/
   /* right */
+  .right {
+    width: 100%;
+  }
   .operation {
     width: 100%;
     margin: 1rem 0rem;
-    padding: 2rem;
+    /* padding: 2rem; */
   }
 
   /**************************************************/
   /* bottom */
-  .bottom {
-    flex-direction: column;
-  }
-  .bottom .value {
-    font-size: 1.4rem;
-    margin-right: 0.8rem;
-  }
-  .bottom .label {
-    margin-bottom: 0.1rem;
-  }
 }
